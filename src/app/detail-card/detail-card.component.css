@@ -3,4 +3,7 @@
 }
 img {
   max-width: 100%;
-}
+}.bgs {
+   background-color: bisque;
+   border-radius: 18px;
+ }

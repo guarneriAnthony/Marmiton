@@ -170,17 +170,6 @@ export class HomeComponent {
       ]
     }
   ]
-  groupRecettesByType() {
-    const recettesGroupedByType: { [type: string]: any[] } = {};
 
-    for (const recette of this.recettes) {
-      if (!recettesGroupedByType[recette.type]) {
-        recettesGroupedByType[recette.type] = [];
-      }
-      recettesGroupedByType[recette.type].push(recette);
-    }
-
-    return recettesGroupedByType;
-  }
 
 }

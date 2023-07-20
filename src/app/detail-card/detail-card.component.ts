@@ -7,6 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class DetailCardComponent {
 visible = false ;
+recetteVisible = true;
 btnText = "La recette";
 
   @Input() name : any;
@@ -23,4 +24,8 @@ btnText = "La recette";
         this.btnText = "Les images"
       }
 }
+show() {
+    this.recetteVisible = !this.recetteVisible
+}
+
 }
