@@ -1,18 +1,16 @@
-<div class="bgs">
-<p class="text-center">{{name}}</p>
-<div *ngIf="visible" class="card-recette">
-  <p>{{type}}</p>
-  <p>{{description}}</p>
-  <button class="btn btn-secondary m-auto d-flex justify-content-center" (mouseenter)="show()"  (mouseout)="show()">Les ingredients</button>
-  <div *ngIf="!recetteVisible">
-    <div *ngFor="let ingredient of ingredients">
-      {{ ingredient.names }} : {{ ingredient.quantity }}
-    </div>
-  </div>
-</div>
-<img [hidden]="visible" src="{{photo}}">
+<div *ngFor="let recette of recettes"  class="bgs">
+  <div class="d-flex" *ngIf="type === recette.type || type === 'all'">
 
-<button class="btn btn-secondary m-auto d-flex justify-content-center" (click)="changeVisible()">{{btnText}}</button>
+<app-recip-content
+[id] = recette.id
+[name] = recette.name
+[type] = recette.type
+[description] = recette.description
+[ingredients] = recette.ingredients
+></app-recip-content>
+
 </div>
+</div>
+
 
 

@@ -1,0 +1,11 @@
+<h1> Liste </h1>
+
+  <ul>
+    <li class="btn btn-dark" (click)="type = 'all' "> all </li>
+    <li class="btn btn-dark" (click)="type = 'entrée'"> entrée </li>
+    <li class="btn btn-dark" (click)="type = 'plat'"> plat </li>
+    <li class="btn btn-dark" (click)="type = 'dessert'"> dessert </li>
+    <li class="btn btn-dark" (click)="type = 'cocktail'"> cocktail </li>
+  </ul>
+
+<app-detail-card [type] = type></app-detail-card>

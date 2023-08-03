@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { DetailCardComponent } from './detail-card/detail-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipFormComponent } from './recip-form/recip-form.component';
+import { FormsModule } from "@angular/forms";
+import { ListRecipeComponent } from './list-recipe/list-recipe.component';
+import { RecipContentComponent } from './recip-content/recip-content.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { RecipFormComponent } from './recip-form/recip-form.component';
     NavComponent,
     HomeComponent,
     DetailCardComponent,
-    RecipFormComponent
+    RecipFormComponent,
+    ListRecipeComponent,
+    RecipContentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

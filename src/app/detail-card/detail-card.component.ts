@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {RecetteService} from "../service/recette.service";
 
 @Component({
   selector: 'app-detail-card',
@@ -6,26 +7,10 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./detail-card.component.css']
 })
 export class DetailCardComponent {
-visible = false ;
-recetteVisible = true;
-btnText = "La recette";
+  constructor(private rs: RecetteService) {
+  }
 
-  @Input() name : any;
-  @Input() type : any;
-  @Input() description : any;
-  @Input() photo : any;
-  @Input() ingredients : any;
+@Input() type: any
 
-  changeVisible(){
-      this.visible = !this.visible;
-      if (!this.visible){
-        this.btnText = "La recette";
-      } else {
-        this.btnText = "Les images"
-      }
-}
-show() {
-    this.recetteVisible = !this.recetteVisible
-}
-
+  recettes = this.rs.recipes
 }
